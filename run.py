@@ -209,4 +209,23 @@ def add_score_to_score_sheet(data):
         main()
 
 def validate_score_answer(data):
+    """
+    Validates the user's input for viewing the score table.
+    Args:
+        data (str): The user's input (either 'y' or 'n').
+    Returns:
+        bool: True if the input is valid, False otherwise.
+    """
+    try:
+        if data not in ["y", "n"]:
+            raise ValueError(
+                f"The answer can only be 'y' or 'n'. Your input: {data}"
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.")
+        return False
+    
+    return True
+
+def show_score():
 
