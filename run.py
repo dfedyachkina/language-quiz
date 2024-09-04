@@ -65,4 +65,24 @@ def user_action():
     number_action = int(number_action)
     return number_action
 
+def validate_user_action(number):
+    """
+    Validates the user's action selection.
+    Args:
+        number (str): The user's input to validate.
+    Returns:
+        bool: True if the input is valid, False otherwise.
+    """
+    try:
+        number = int(number)
+        if number > 3:
+            raise ValueError(
+                f'Sorry, but the number of action {number} doesn\'t exist.'
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}. Please choose a number of action from 1 to 3.")
+        return False
+
+    return True
+
 
