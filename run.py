@@ -51,4 +51,18 @@ def validate_username(username):
 
     return True
 
+def user_action():
+    """
+    Prompts the user to select an action from the menu.
+    Returns:
+        number_action (int): The validated number of the user's action.
+    """
+    while True:
+        number_action = input("Please enter the number of the action you want to do: \n")
+
+        if validate_user_action(number_action):
+            break
+    number_action = int(number_action)
+    return number_action
+
 
