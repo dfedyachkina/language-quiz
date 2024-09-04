@@ -173,4 +173,15 @@ def validate_answer(answer):
     return True
 
 def end_quiz(score, correct_answers, language):
+    """
+    Displays the user's quiz results.
+    Args:
+        score (int): The user's total score.
+        correct_answers (int): The number of correct answers given by the user.
+        language (str): The language of the quiz.
+    """
+    print(f"\nThe result of the {language.capitalize()} Quiz\n")
+    print(f"The number of correct answers: {correct_answers} \n")
+    print(f"Your score is {score}% \n")
+
 
