@@ -85,4 +85,29 @@ def validate_user_action(number):
 
     return True
 
+def start_quiz():
+    """
+    Starts the quiz by asking the user to choose a language.
+    Returns:
+        result (list): The user's score and selected language.
+    """
+    print("Choose a language:\n")
+    print(" (1) Russian\n")
+    print(" (2) Spanish\n")
+    print(" (3) French\n")
+    while True:
+        number_language = int(input("Enter the number of the selected language:\n"))
+
+        if validate_user_action(number_language):
+            break
+
+    if number_language == 1:
+        result = show_questions("russian")
+    elif number_language == 2:
+        result = show_questions("spanish")
+    else:
+        result = show_questions("french")
+
+    return result
+
 
