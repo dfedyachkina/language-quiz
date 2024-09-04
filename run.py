@@ -253,4 +253,13 @@ def show_score():
     print("Returning to the menu...")
     main()
 
+def exit_program(username):
+    """
+    Exits the program with a goodbye message.
+    Args:
+        username (str): The username to include in the goodbye message.
+    """
+    print("The program is closing...")
+    print(f"Bye-bye, {username}!")
+
 
