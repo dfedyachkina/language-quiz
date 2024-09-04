@@ -184,4 +184,29 @@ def end_quiz(score, correct_answers, language):
     print(f"The number of correct answers: {correct_answers} \n")
     print(f"Your score is {score}% \n")
 
+def add_score_to_score_sheet(data):
+    """
+    Adds the user's score to the Google Sheets score table.
+    Args:
+        data (list): A list containing the username, score, and language.
+    """
+    username = data[0]
+    print(f"Adding {username}'s score to the score table... \n")
+    score_sheet = SHEET.worksheet("scores")
+    score_sheet.append_row(data)
+    print(f"{username}'s score has been added successfully to the score table. \n")
+    while True:
+        score_answer = input("Would you like to see the whole score table? Enter y or n: \n")
+        score_answer = score_answer.lower()
+
+        if validate_score_answer(score_answer):
+            break
+
+    if score_answer == "y":
+        show_score()
+    else:
+        print("Returning to the menu... \n")
+        main()
+
+def validate_score_answer(data):
 
