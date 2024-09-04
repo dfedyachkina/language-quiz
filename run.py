@@ -153,4 +153,24 @@ def show_questions(language):
     score_data = [user_score, language]
     return score_data
 
+def validate_answer(answer):
+    """
+    Validates the user's answer to the quiz question.
+    Args:
+        answer (str): The user's answer to validate.
+    Returns:
+        bool: True if the answer is valid, False otherwise.
+    """
+    try:
+        if answer not in ["a", "b", "c"]:
+            raise ValueError(
+                f"Sorry, but the option {answer} doesn't exist."
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}, please enter a, b, or c.")
+        return False
+    
+    return True
+
+def end_quiz(score, correct_answers, language):
 
