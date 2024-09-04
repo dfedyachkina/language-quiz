@@ -32,4 +32,23 @@ def get_username():
         
     return username
 
+def validate_username(username):
+    """
+    Validates the length of the username.
+    Args:
+        username (str): The username to validate.
+    Returns:
+        bool: True if the username is valid, False otherwise.
+    """
+    try: 
+        if len(username) < 4:
+            raise ValueError(
+                f'The username should contain at least 4 letters. Your username contains just {len(username)} letters.'
+            )
+    except ValueError as e:
+        print(f'Invalid data: {e}, please try again. \n')
+        return False
+
+    return True
+
 
