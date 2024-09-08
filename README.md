@@ -137,3 +137,10 @@ The primary functions used on this application are:
 - `main()`
     - Run all program functions.
 
+### Imports
+
+I've used the following Python packages and/or external imported packages.
+
+- `gspread`: used with the Google Sheets API
+- `google.oauth2.service_account`: used for the Google Sheets API credentials
+
