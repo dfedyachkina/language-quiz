@@ -93,3 +93,15 @@ Consider adding any helpful links or notes to help remind you in the future, if 
 - [![Google Sheets](https://img.shields.io/badge/Google_Sheets-grey?logo=googlesheets&logoColor=34A853)](https://docs.google.com/spreadsheets) used for storing data from my Python app.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
 
+## Data Model
+
+### Flowchart
+
+To follow best practice, a flowchart was created for the app's logic,
+and mapped out before coding began using a free version of
+[Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) and/or [Draw.io](https://www.draw.io).
+
+Below is the flowchart of the main process of this Python program. It shows the entire cycle of the program.
+
+![screenshot](documentation/flowchart.png)
+
