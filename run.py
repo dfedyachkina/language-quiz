@@ -15,6 +15,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('language_quiz')
 
+
 def get_username():
     """
     Prompts the user to create a username.
@@ -24,13 +25,13 @@ def get_username():
     """
     print("Welcome to the Language Quiz!\n")
     while True:
-        print("Before the game starts - you need to create a username. Username should be more than 4 letters.\n")
+        print("Before the game starts - you need to create a username.Username should be more than 4 letters.\n")
         username = input("Enter a username: \n")
 
         if validate_username(username):
             break
-        
     return username
+
 
 def validate_username(username):
     """
@@ -40,7 +41,7 @@ def validate_username(username):
     Returns:
         bool: True if the username is valid, False otherwise.
     """
-    try: 
+    try:
         if len(username) < 4:
             raise ValueError(
                 f'The username should contain at least 4 letters. Your username contains just {len(username)} letters.'
@@ -50,6 +51,7 @@ def validate_username(username):
         return False
 
     return True
+
 
 def user_action():
     """
@@ -64,6 +66,7 @@ def user_action():
             break
     number_action = int(number_action)
     return number_action
+
 
 def validate_user_action(number):
     """
@@ -84,6 +87,7 @@ def validate_user_action(number):
         return False
 
     return True
+
 
 def start_quiz():
     """
@@ -110,6 +114,7 @@ def start_quiz():
 
     return result
 
+
 def show_questions(language):
     """
     Displays all questions in the selected language, collects user answers, and calculates the score.
@@ -131,7 +136,6 @@ def show_questions(language):
         second_option = row[3]
         third_option = row[4]
         correct_answer = row[5]
-        
         print(f"\n Question {question_number}: What is the translation for '{word}'?\n")
         print(f"  a) {first_option}\n")
         print(f"  b) {second_option}\n")
@@ -148,10 +152,10 @@ def show_questions(language):
             number_correct_answers += 1
         else:
             print(f"Oops! That is not correct. The right answer is {correct_answer}.")
-    
     end_quiz(user_score, number_correct_answers, language)
     score_data = [user_score, language]
     return score_data
+
 
 def validate_answer(answer):
     """
@@ -169,8 +173,8 @@ def validate_answer(answer):
     except ValueError as e:
         print(f"Invalid data: {e}, please enter a, b, or c.")
         return False
-    
     return True
+
 
 def end_quiz(score, correct_answers, language):
     """
@@ -183,6 +187,7 @@ def end_quiz(score, correct_answers, language):
     print(f"\nThe result of the {language.capitalize()} Quiz\n")
     print(f"The number of correct answers: {correct_answers} \n")
     print(f"Your score is {score}% \n")
+
 
 def add_score_to_score_sheet(data):
     """
@@ -208,6 +213,7 @@ def add_score_to_score_sheet(data):
         print("Returning to the menu... \n")
         main()
 
+
 def validate_score_answer(data):
     """
     Validates the user's input for viewing the score table.
@@ -224,8 +230,8 @@ def validate_score_answer(data):
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.")
         return False
-    
     return True
+
 
 def show_score():
     """
@@ -249,9 +255,9 @@ def show_score():
     for row in data[1:]:
         print("| " + " | ".join(f"{item:{col_widths[i]}}" for i, item in enumerate(row)) + " |")
         print(border_line)
-    
     print("Returning to the menu...")
     main()
+
 
 def exit_program(username):
     """
@@ -261,6 +267,7 @@ def exit_program(username):
     """
     print("The program is closing...")
     print(f"Bye-bye, {username}!")
+
 
 def main():
     """
@@ -280,14 +287,6 @@ def main():
         show_score()
     else:
         exit_program(username)
-    
 
 
 main()
-
-
-
-
-
-
-
