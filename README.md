@@ -105,3 +105,35 @@ Below is the flowchart of the main process of this Python program. It shows the 
 
 ![screenshot](documentation/flowchart.png)
 
+### Classes & Functions
+
+
+The primary functions used on this application are:
+
+- `get_username()`
+    - Get a username from user.
+- `validate_username()`
+    - Validate if the user created the username which meets requirements.
+- `user_action()`
+    - Show options of actionns to the user and get a number of actiopn from user.
+- `validate_user_action()`
+    - Validate the input for action from user.
+- `start_quiz()`
+    - Show options of languages.
+- `show_questions()`
+    - Show the questions of the chosen language's quiz, gets the username's answers and calculate the score.
+- `validate_answer()`
+    -  Validate the user's inputs for quiz answers.
+- `end_quiz()`
+    -  Didplays the result of quiz.
+- `add_score_to_score_sheet()`
+    -  Add user's score to the score worksheet and ask a user if he would like to see the whole score table.
+- `validate_score_answer()`
+    -  Validate user's input for the question if he would like to see thw whole score table.
+- `show_score()`
+    -  Shows the whole score table.
+- `exit_program()`
+    -  Display bye message and and the program.
+- `main()`
+    - Run all program functions.
+
