@@ -248,6 +248,7 @@ def end_quiz(score, correct_answers, language):
     print(f"\nThe result of the {language.capitalize()} Quiz\n")
     print(f"The number of correct answers: {correct_answers} \n")
     print(f"Your score is {score}% \n")
+    clear()
 
 
 def add_score_to_score_sheet(data):
