@@ -140,6 +140,10 @@ I've used the following Python packages and/or external imported packages.
 
 - `gspread`: used with the Google Sheets API
 - `google.oauth2.service_account`: used for the Google Sheets API credentials
+- `random`: used for shuffle the options of answers
+- `time`: used for the pause code for some time
+- `os`: used for the having access to cls command
+- `colorama`: used for the coloring text
 
 ## Testing
 
