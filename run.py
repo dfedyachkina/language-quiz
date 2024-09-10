@@ -168,12 +168,14 @@ def validate_lan_answer(number):
 
 def show_questions(language):
     """
-    Displays all questions in the selected language, collects user answers, and calculates the score.
+    Displays all questions in the selected language,
+    Collects user answers, and calculates the score.
     Args:
         language (str): The selected language for the quiz.
     Returns:
         score_data (list): A list containing the user's score and the language.
     """
+    clear()
     print(f"You chose {language.capitalize()} language.")
     lan_sheet = SHEET.worksheet(language)
     all_data = lan_sheet.get_all_values()
@@ -183,26 +185,34 @@ def show_questions(language):
     for row in questions:
         question_number = row[0]
         word = row[1]
-        first_option = row[2]
-        second_option = row[3]
-        third_option = row[4]
+        options = [row[2], row[3], row[4]]
         correct_answer = row[5]
-        print(f"\n Question {question_number}: What is the translation for '{word}'?\n")
-        print(f"  a) {first_option}\n")
-        print(f"  b) {second_option}\n")
-        print(f"  c) {third_option}\n")
+        random.shuffle(options)
+        print(
+            f"\n Question {question_number}: "
+            f"What is the translation for '{word}'?\n"
+            )
+        for idx, option in enumerate(options):
+            print(f"  {chr(97 + idx)}) {option}\n")
         while True:
-            user_answer = input("Please enter your answer (a, b, c): ")
-            user_answer = user_answer.lower()
+            user_answer = input("Please enter your answer (a, b, c): ").lower()
 
             if validate_answer(user_answer):
                 break
-        if user_answer == correct_answer:
-            print(f"It's correct!")
+        answer_index = ord(user_answer) - 97
+        selected_option = options[answer_index]
+        if selected_option == correct_answer:
+            print(f"{Fore.GREEN}It's correct!")
             user_score += 20
             number_correct_answers += 1
         else:
-            print(f"Oops! That is not correct. The right answer is {correct_answer}.")
+            print(
+                f"{Fore.RED}Oops! That is not correct. "
+                "The right answer is '{correct_answer}'."
+                )
+        print("The next question will be displayed in 3 seconds...")
+        time.sleep(2)
+        clear()
     end_quiz(user_score, number_correct_answers, language)
     score_data = [user_score, language]
     return score_data
