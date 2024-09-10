@@ -336,6 +336,7 @@ def exit_program(username):
     Args:
         username (str): The username to include in the goodbye message.
     """
+    clear()
     print("The program is closing...")
     print(f"Bye-bye, {username}!")
 
