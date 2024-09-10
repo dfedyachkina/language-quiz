@@ -37,14 +37,19 @@ def get_username():
     Returns:
         username (str): The validated username entered by the user.
     """
+    clear()
     print("Welcome to the Language Quiz!\n")
     while True:
-        print("Before the game starts - you need to create a username.Username should be more than 4 letters.\n")
-        username = input("Enter a username: \n")
+        print(
+            "Before the game starts - you need to create a username."
+            "Username should be more than 4 letters.\n"
+            )
+        USERNAME = input("Enter a username: \n")
 
-        if validate_username(username):
+        if validate_username(USERNAME):
+            clear()
             break
-    return username
+    return USERNAME
 
 
 def validate_username(username):
