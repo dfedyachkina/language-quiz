@@ -345,20 +345,20 @@ def main():
     """
     Runs the main program loop, displaying the menu and handling user input.
     """
-    username = get_username()
-    print(f"\nHi, {username}! Here is the menu of the game:\n")
+    clear()
+    print(f"\nHi, {USERNAME}! Here is the menu of the game:\n")
     print("\n (1) Start Language Quiz!")
     print("\n (2) Show the scores")
     print("\n (3) Exit\n")
     number_action = user_action()
     if number_action == 1:
         result = start_quiz()
-        result.insert(0, username)
+        result.insert(0, USERNAME)
         add_score_to_score_sheet(result)
     elif number_action == 2:
         show_score()
     else:
-        exit_program(username)
+        exit_program(USERNAME)
 
 
 main()
