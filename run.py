@@ -63,7 +63,9 @@ def validate_username(username):
     try:
         if len(username) < 4:
             raise ValueError(
-                f'The username should contain at least 4 letters. Your username contains just {len(username)} letters.'
+                f'{Fore.RED}The username should contain at least 4 letters.'
+                f'{Fore.RED}Your username contains just '
+                f'{len(username)} letters.'
             )
     except ValueError as e:
         print(f'Invalid data: {e}, please try again. \n')
@@ -102,7 +104,10 @@ def validate_user_action(number):
                 f'Sorry, but the number of action {number} doesn\'t exist.'
             )
     except ValueError as e:
-        print(f"Invalid data: {e}. Please choose a number of action from 1 to 3.")
+        print(
+            f"{Fore.RED}Invalid data: {e}. "
+            f"{Fore.RED}Please choose a number of action from 1 to 3."
+            )
         return False
 
     return True
@@ -190,7 +195,7 @@ def validate_answer(answer):
                 f"Sorry, but the option {answer} doesn't exist."
             )
     except ValueError as e:
-        print(f"Invalid data: {e}, please enter a, b, or c.")
+        print(f"{Fore.RED}Invalid data: {e}, please enter a, b, or c.")
         return False
     return True
 
@@ -247,7 +252,7 @@ def validate_score_answer(data):
                 f"The answer can only be 'y' or 'n'. Your input: {data}"
             )
     except ValueError as e:
-        print(f"Invalid data: {e}, please try again.")
+        print(f"{Fore.RED}Invalid data: {e}, please try again.")
         return False
     return True
 
