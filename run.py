@@ -307,23 +307,27 @@ def show_score():
     print("The score table:")
     score_sheet = SHEET.worksheet("scores")
     data = score_sheet.get_all_values()
-    col_widths = [max(len(str(item)) for item in col) for col in zip(*data)]
-
-    # Create a horizontal border line
-    border_line = "+" + "+".join("-" * (width + 2) for width in col_widths) + "+"
-
-    # Print the header row with borders
-    print(border_line)
     headers = data[0]
-    print("| " + " | ".join(f"{header:{col_widths[i]}}" for i, header in enumerate(headers)) + " |")
+    scores_data = data[1:]
+    scores_data.sort(key=lambda row: int(row[1]), reverse=True)
+    col_widths = [max(len(str(item)) for item in col) for col in zip(*([headers] + scores_data))]  # noqa
+    border_line = "+" + "+".join("-" * (width + 2) for width in col_widths) + "+"  # noqa
     print(border_line)
-
-    # Print each row of data with borders
-    for row in data[1:]:
-        print("| " + " | ".join(f"{item:{col_widths[i]}}" for i, item in enumerate(row)) + " |")
+    print("| " + " | ".join(f"{header:{col_widths[i]}}" for i, header in enumerate(headers)) + " |")  # noqa
+    print(border_line)
+    for row in scores_data:
+        print("| " + " | ".join(f"{item:{col_widths[i]}}" for i, item in enumerate(row)) + " |")  # noqa
         print(border_line)
-    print("Returning to the menu...")
-    main()
+    back_to_menu = input("\n Would you like to return to the menu?(y/n): \n")
+    while True:
+        back_to_menu = back_to_menu.lower()
+        if validate_answer_yes_no(back_to_menu):
+            break
+    if back_to_menu == "y":
+        print("Returning to the menu...")
+        main()
+    else:
+        exit_program(USERNAME)
 
 
 def exit_program(username):
