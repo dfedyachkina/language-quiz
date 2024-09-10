@@ -1,6 +1,11 @@
+import random
+import time
+import os
 import gspread
 from google.oauth2.service_account import Credentials
-from pprint import pprint
+import colorama
+from colorama import Fore, Back, Style
+
 
 # Define the scope for Google Sheets and Drive API
 SCOPE = [
