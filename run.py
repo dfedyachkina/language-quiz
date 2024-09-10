@@ -22,6 +22,13 @@ SHEET = GSPREAD_CLIENT.open('language_quiz')
 USERNAME = None
 
 
+def clear():
+    """
+    Clear function to clean-up the terminal so things don't get messy.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
 def get_username():
     """
     Prompts the user to create a username.
