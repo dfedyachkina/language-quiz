@@ -261,18 +261,23 @@ def add_score_to_score_sheet(data):
     print(f"Adding {username}'s score to the score table... \n")
     score_sheet = SHEET.worksheet("scores")
     score_sheet.append_row(data)
-    print(f"{username}'s score has been added successfully to the score table. \n")
+    print(
+        f"{username}'s score has been added successfully to the score table.\n"
+        )
     while True:
-        score_answer = input("Would you like to see the whole score table? Enter y or n: \n")
+        score_answer = input(
+            "Would you like to see the whole score table? Enter y or n: \n"
+            )
         score_answer = score_answer.lower()
 
-        if validate_score_answer(score_answer):
+        if validate_answer_yes_no(score_answer):
             break
 
     if score_answer == "y":
         show_score()
     else:
         print("Returning to the menu... \n")
+        clear()
         main()
 
 
