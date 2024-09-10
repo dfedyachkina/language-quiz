@@ -361,4 +361,6 @@ def main():
         exit_program(USERNAME)
 
 
-main()
+if __name__ == "__main__":
+    USERNAME = get_username()
+    main()
