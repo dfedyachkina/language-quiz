@@ -20,6 +20,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('language_quiz')
 USERNAME = None
+colorama.init(autoreset=True)
 
 
 def clear():
