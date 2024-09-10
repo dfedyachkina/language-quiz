@@ -42,7 +42,7 @@ def get_username():
     while True:
         print(
             "Before the game starts - you need to create a username."
-            "Username should be more than 4 letters.\n"
+            "\nUsername should be more than 4 letters.\n"
             )
         USERNAME = input("Enter a username: \n")
 
