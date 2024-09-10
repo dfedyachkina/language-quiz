@@ -211,7 +211,10 @@ def show_questions(language):
                 f"The right answer is '{correct_answer}'."
                 )
         if question_number == 5:
-            print("This is the end of the quiz. The score will be shown in 3 seconds...")
+            print(
+                "This is the end of the quiz."
+                "The score will be shown in 3 seconds..."
+                )
         else:
             print("The next question will be displayed in 3 seconds...")
         time.sleep(2)
