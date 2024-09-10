@@ -279,6 +279,7 @@ def add_score_to_score_sheet(data):
         show_score()
     else:
         print("Returning to the menu... \n")
+        time(2)
         clear()
         main()
 
