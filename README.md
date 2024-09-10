@@ -11,11 +11,9 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://language-quiz-8
 
 ## UX
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+ - `RED` - error text or incorrect answer
+ - `GREEN` - correct answer
+ - `BLUE`- score color
 
 ## Features
 
