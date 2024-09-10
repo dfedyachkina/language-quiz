@@ -126,19 +126,23 @@ def start_quiz():
     print(" (1) Russian\n")
     print(" (2) Spanish\n")
     print(" (3) French\n")
+    print(" (4) German\n")
     while True:
-        number_language = int(input("Enter the number of the selected language:\n"))
+        number_language = int(
+            input("Enter the number of the selected language:\n")
+            )
 
-        if validate_user_action(number_language):
+        if validate_lan_answer(number_language):
             break
 
     if number_language == 1:
         result = show_questions("russian")
     elif number_language == 2:
         result = show_questions("spanish")
-    else:
+    elif number_language == 3:
         result = show_questions("french")
-
+    else:
+        result = show_questions("german")
     return result
 
 
