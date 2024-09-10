@@ -208,7 +208,7 @@ def show_questions(language):
         else:
             print(
                 f"{Fore.RED}Oops! That is not correct. "
-                "The right answer is '{correct_answer}'."
+                f"The right answer is '{correct_answer}'."
                 )
         print("The next question will be displayed in 3 seconds...")
         time.sleep(2)
