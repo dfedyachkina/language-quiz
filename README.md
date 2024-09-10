@@ -17,66 +17,61 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://language-quiz-8
 
 ## Features
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 ### Existing Features
 
-- **YOUR-TITLE-FOR-FEATURE-#1**
+- **Start the program**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Greet a user and ask to enter username
 
 ![screenshot](documentation/features/feature01.png)
 
-- **YOUR-TITLE-FOR-FEATURE-#2**
+- **Menu**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Display a menu and ask user to enter the number of action he wants to proceed with
 
 ![screenshot](documentation/features/feature02.png)
 
-- **YOUR-TITLE-FOR-FEATURE-#3**
+- **Start Quiz - Choose language**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Display the language's options and ask user to enter the number of language he wants to proceed with
 
 ![screenshot](documentation/features/feature03.png)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
+- **Quiz Questions**
 
-Repeat as necessary for as many features as your site contains.
+    - Display question of chosen language's quiz and get an answer from the user. After get user's inputs - the feature display the result if the answer was correct or not.
 
-Hint: the more, the merrier!
+![screenshot](documentation/features/feature04.png)
+![screenshot](documentation/features/feature05.png)
+![screenshot](documentation/features/feature06.png)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+- **Add score to score worksheet**
+
+    - Display a user's score and ask him if he would like to see the whole score.
+
+![screenshot](documentation/features/feature07.png)
+
+- **Show score table**
+
+    - Display the whole score table and ask user if he would like to come back to menu.
+
+![screenshot](documentation/features/feature08.png)
+
+- **Exit program**
+
+    - Display a message to the user and stop the code.
+
+![screenshot](documentation/features/feature09.png)
+
 
 ### Future Features
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#1
-    - Any additional notes about this feature.
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#2
-    - Any additional notes about this feature.
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#3
-    - Any additional notes about this feature.
+- Level Language Quiz 
+    - Add options to choose the hardness of quiz: Easy, Medium, Hard.
+- More languages
+    - Add more languages such as: Portuguese, Ukranian, Polish, Irish, Turkish.
+- Sort score by languages
+    - Show score by chosen language
 
 ## Tools & Technologies Used
 
