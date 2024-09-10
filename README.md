@@ -103,6 +103,8 @@ Below is the flowchart of the main process of this Python program. It shows the 
 
 The primary functions used on this application are:
 
+- `clear()`
+    - Clear the terminal.
 - `get_username()`
     - Get a username from user.
 - `validate_username()`
@@ -113,6 +115,8 @@ The primary functions used on this application are:
     - Validate the input for action from user.
 - `start_quiz()`
     - Show options of languages.
+- `validate_lan_answer()`
+    -  Validate the user's input for choose language question.
 - `show_questions()`
     - Show the questions of the chosen language's quiz, gets the username's answers and calculate the score.
 - `validate_answer()`
@@ -121,8 +125,8 @@ The primary functions used on this application are:
     -  Didplays the result of quiz.
 - `add_score_to_score_sheet()`
     -  Add user's score to the score worksheet and ask a user if he would like to see the whole score table.
-- `validate_score_answer()`
-    -  Validate user's input for the question if he would like to see thw whole score table.
+- `validate_answer_yes_no()`
+    -  Validate user's input for the question where is answer yes or no
 - `show_score()`
     -  Shows the whole score table.
 - `exit_program()`
