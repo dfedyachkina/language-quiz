@@ -146,6 +146,26 @@ def start_quiz():
     return result
 
 
+def validate_lan_answer(number):
+    """
+    Validation of user's answer to choose language
+    """
+    try:
+        number = int(number)
+        if number > 4:
+            raise ValueError(
+                f'Sorry, but the number of action {number} doesn\'t exist.'
+            )
+    except ValueError as e:
+        print(
+            f"{Fore.RED}Invalid data: {e}. "
+            f"{Fore.RED}Please choose a number of action from 1 to 3."
+            )
+        return False
+
+    return True
+
+
 def show_questions(language):
     """
     Displays all questions in the selected language, collects user answers, and calculates the score.
