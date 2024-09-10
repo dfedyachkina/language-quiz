@@ -281,7 +281,7 @@ def add_score_to_score_sheet(data):
         main()
 
 
-def validate_score_answer(data):
+def validate_answer_yes_no(data):
     """
     Validates the user's input for viewing the score table.
     Args:
