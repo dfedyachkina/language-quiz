@@ -327,7 +327,9 @@ def show_score():
         print("| " + " | ".join(f"{item:{col_widths[i]}}" for i, item in enumerate(row)) + " |")  # noqa
         print(border_line)
     while True:
-        back_to_menu = input("\n Would you like to return to the menu?(y/n): \n")
+        back_to_menu = input(
+            "\n Would you like to return to the menu?(y/n): \n"
+            )
         back_to_menu = back_to_menu.lower()
         if validate_answer_yes_no(back_to_menu):
             break
