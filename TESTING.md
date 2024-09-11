@@ -48,76 +48,34 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-Forms:
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-
-PP3 (Python-only):
-- Users must enter a valid letter/word/string when prompted
-- Users must choose from a specific list only
-
-MS3 (Flask) | MS4/PP4/PP5 (Django):
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
-Make sure to include the `required` attribute on any form-fields that should be mandatory.
-Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
-
-You should include any manual tests performed, and the expected results/outcome.
-
-Testing should be replicable.
-Ideally, tests cases should focus on each individual section of every page on the website.
-Each test case should be specific, objective, and step-wise replicable.
-
-Instead of adding a general overview saying that everything works fine,
-consider documenting tests on each element of the page
-(ie. button clicks, input box validation, navigation links, etc.) by testing them in their happy flow,
-and also the bad/exception flow, mentioning the expected and observed results,
-and drawing a parallel between them where applicable.
-
-Consider using the following format for manual test cases:
-
-Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
-
-Use the table below as a basic start, and expand on it using the logic above.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature01.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature02.png) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature03.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature04.png) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature05.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature06.png) |
-| Contact | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature08.png) |
-| repeat for all remaining pages | x | x | x | x | x |
+| Start the program | | | | | |
+| | Feature is expected to do validation username and show error if the username is less than 4 letters when the user does input a username | Tested the feature by doing input username which less than 3 letters | The feature behaved as expected, and it did display error and ask user to enter username again | Test concluded and passed | ![screenshot](documentation/features/feature01-error.png) |
+| | Feature is expected to do show display menu when the user does input a valid username | Tested the feature by doing input a valid username | The feature behaved as expected, it did show menu. | Test concluded and passed| ![screenshot](documentation/features/feature01.png) |
+| Menu | | | | | |
+| | Feature is expected to do display error and ask the user to enter valid number when the user does input unvalid number of action | Tested the feature by doing enter unvalid number of action | The feature behaved as expected, and it did display error | Test concluded and passed | ![screenshot](documentation/features/feature02-error.png) |
+| | Feature is expected to do display choose language section when the user does enter a valid number of action | Tested the feature by doing enter a valid number of action | The feature behaved as expected, and it did choose language section | Test concluded and passed | ![screenshot](documentation/features/feature02.png) |
+| Start Quiz - Choose language | | | | | |
+| | Feature is expected to do display error and ask the user to enter valid number when the user does input unvalid number of action | Tested the feature by doing enter unvalid number of action | The feature behaved as expected, and it did display error | Test concluded and passed | ![screenshot](documentation/features/feature03_error.png) |
+| | Feature is expected to do display quiz questions and start quiz when the user does enter a valid number of action | Tested the feature by doing enter a valid number of action | The feature behaved as expected, and it did display quiz questions and start quiz | Test concluded and passed | ![screenshot](documentation/features/feature03.png) |
+| Quiz Questions | | | | | |
+| | Feature is expected to do display error and ask the user to enter valid option's letter when the user does input unvalid option's letter | Tested the feature by doing enter unvalid option's letter | The feature behaved as expected, and it did display error | Test concluded and passed |![screenshot](documentation/features/feature04-error.png) |
+| | Feature is expected to do display if the user guess the answer and go to the next question when the user does enter valid option's letter| Tested the feature by doing option's letter | The feature behaved as expected, and it did display the result if user guess or not and go to the next question | Test concluded and passed |![screenshot](documentation/features/feature05.png) |
+| Add score to score worksheet | | | | | |
+| | Feature is expected to show whole score table when the user does input "y" | Tested the feature by doing input "y"" | The feature behaved as expected, and it did show the whole score table | Test concluded and passed |![screenshot](documentation/features/feature07.png) |
+| | Feature is expected to do show the message about program is closing when the user does enter "n"| Tested the feature by doing enter "n" | The feature behaved as expected, and it did display the mesagge that program is closing | Test concluded and passed |![screenshot](documentation/features/feature07.png) |
+| | Feature is expected to do display error and ask the user to enter "y" or "n" when the user does input unvalid letter of action | Tested the feature by doing enter unvalid letter of action | The feature behaved as expected, and it did display error | Test concluded and passed |![screenshot](documentation/features/feature07-error.png) |
+| Show Score | | | | | |
+| | Feature is expected to back to menu when the user does input "y" | Tested the feature by doing input "y"" | The feature behaved as expected, and it did back to menu | Test concluded and passed |![screenshot](documentation/features/feature08.png) |
+| | Feature is expected to do show the message about program is closing when the user does enter "n"| Tested the feature by doing enter "n" | The feature behaved as expected, and it did display the mesagge that program is closing | Test concluded and passed |![screenshot](documentation/features/feature08.png) |
+| | Feature is expected to do display error and ask the user to enter "y" or "n" when the user does input unvalid letter of action | Tested the feature by doing enter unvalid letter of action | The feature behaved as expected, and it did display error | Test concluded and passed |![screenshot](documentation/features/feature08-error.png) |
+| Exit Program | | | | | |
+| | Feature is expected to do show a message and stop the program when the user chose the action "Exit" previously | Tested the feature by doing choose "Exit" action | The feature behaved as expected, and it did diaplay message and stop program | Test concluded and passed |![screenshot](documentation/features/feature09.png) |
+
+
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
 
