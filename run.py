@@ -63,9 +63,9 @@ def validate_username(username):
     try:
         if len(username) < 4:
             raise ValueError(
-                f'{Fore.RED}The username should contain at least 4 letters.'
-                f'{Fore.RED}Your username contains just '
-                f'{len(username)} letters.'
+                f'{Fore.RED}The username should contain at least 4 letters'
+                f'{Fore.RED}\nYour username contains just '
+                f'{len(username)} letters'
             )
     except ValueError as e:
         print(f'Invalid data: {e}, please try again. \n')
@@ -104,12 +104,12 @@ def validate_user_action(number):
         number = int(number)
         if number > 3:
             raise ValueError(
-                f'Sorry, but the number of action {number} doesn\'t exist.'
+                f'Sorry, but the number of action {number} doesn\'t exist'
             )
     except ValueError as e:
         print(
-            f"{Fore.RED}Invalid data: {e}. "
-            f"{Fore.RED}Please choose a number of action from 1 to 3."
+            f"{Fore.RED}Invalid data: {e} "
+            f"{Fore.RED}\nPlease choose a number of action from 1 to 3."
             )
         return False
 
@@ -154,12 +154,12 @@ def validate_lan_answer(number):
         number = int(number)
         if number > 4:
             raise ValueError(
-                f'Sorry, but the number of action {number} doesn\'t exist.'
+                f'Sorry, but the number of action {number} doesn\'t exist'
             )
     except ValueError as e:
         print(
             f"{Fore.RED}Invalid data: {e}. "
-            f"{Fore.RED}Please choose a number of action from 1 to 3."
+            f"{Fore.RED}\nPlease choose a number of action from 1 to 4."
             )
         return False
 
@@ -235,7 +235,7 @@ def validate_answer(answer):
     try:
         if answer not in ["a", "b", "c"]:
             raise ValueError(
-                f"Sorry, but the option {answer} doesn't exist."
+                f"Sorry, but the option {answer} doesn't exist"
             )
     except ValueError as e:
         print(f"{Fore.RED}Invalid data: {e}, please enter a, b, or c.")
@@ -301,7 +301,9 @@ def validate_answer_yes_no(data):
                 f"The answer can only be 'y' or 'n'. Your input: {data}"
             )
     except ValueError as e:
-        print(f"{Fore.RED}Invalid data: {e}, please try again.")
+        print(
+            f"{Fore.RED}Invalid data: {e}.\nPlease try again."
+            )
         return False
     return True
 
@@ -324,8 +326,8 @@ def show_score():
     for row in scores_data:
         print("| " + " | ".join(f"{item:{col_widths[i]}}" for i, item in enumerate(row)) + " |")  # noqa
         print(border_line)
-    back_to_menu = input("\n Would you like to return to the menu?(y/n): \n")
     while True:
+        back_to_menu = input("\n Would you like to return to the menu?(y/n): \n")
         back_to_menu = back_to_menu.lower()
         if validate_answer_yes_no(back_to_menu):
             break
