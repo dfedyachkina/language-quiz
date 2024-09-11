@@ -50,7 +50,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 Defensive programming was manually tested with the below user acceptance testing:
 
-| Page | Expectation | Test | Result | Fix | Screenshot |
+| Feature | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Start the program | | | | | |
 | | Feature is expected to do validation username and show error if the username is less than 4 letters when the user does input a username | Tested the feature by doing input username which less than 3 letters | The feature behaved as expected, and it did display error and ask user to enter username again | Test concluded and passed | ![screenshot](documentation/features/feature01-error.png) |
