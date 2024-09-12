@@ -32,8 +32,8 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Terminal | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet.png) |  Works as expected |
+| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile.png) | Not responsive for mobile. IPhone's users are not able to enter anything in terminal, but Android's users are |
+| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet.png) |  Works as expected |
 | Desktop | ![screenshot](documentation/responsiveness/responsive-desktop.png) | Works as expected |
 
 
@@ -53,116 +53,64 @@ Defensive programming was manually tested with the below user acceptance testing
 | Feature | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Start the program | | | | | |
-| | Feature is expected to do validation username and show error if the username is less than 4 letters when the user does input a username | Tested the feature by doing input username which less than 3 letters | The feature behaved as expected, and it did display error and ask user to enter username again | Test concluded and passed | ![screenshot](documentation/features/feature01-error.png) |
-| | Feature is expected to do show display menu when the user does input a valid username | Tested the feature by doing input a valid username | The feature behaved as expected, it did show menu. | Test concluded and passed| ![screenshot](documentation/features/feature01.png) |
+| | Feature is expected to do validation username and show error if the username is less than 4 letters when the user does input a username | Tested the feature by doing input username less than 3 letters | The feature behaved as expected, and it did display error and ask the user to enter username again | Test concluded and passed | ![screenshot](documentation/features/feature01-error.png) |
+| The feature is expected to show the display menu when the user does input the valid username | Tested the feature by doing input the valid username | The feature behaved as expected; it did show the menu. | Test concluded and passed | ! [screenshot](documentation/features/feature01.png) |
 | Menu | | | | | |
-| | Feature is expected to do display error and ask the user to enter valid number when the user does input unvalid number of action | Tested the feature by doing enter unvalid number of action | The feature behaved as expected, and it did display error | Test concluded and passed | ![screenshot](documentation/features/feature02-error.png) |
+| The feature is expected to do a display error and ask the user to enter a valid number when the user does input an invalid number of action | Tested the feature by entering an invalid number of action | The feature behaved as expected, and it did a display error | Test concluded and passed | ![screenshot](documentation/features/feature02-error.png) |
 | | Feature is expected to do display choose language section when the user does enter a valid number of action | Tested the feature by doing enter a valid number of action | The feature behaved as expected, and it did choose language section | Test concluded and passed | ![screenshot](documentation/features/feature02.png) |
-| Start Quiz - Choose language | | | | | |
-| | Feature is expected to do display error and ask the user to enter valid number when the user does input unvalid number of action | Tested the feature by doing enter unvalid number of action | The feature behaved as expected, and it did display error | Test concluded and passed | ![screenshot](documentation/features/feature03_error.png) |
+| Start Quiz - Choose Language | | | | | |
+| The feature is expected to do a display error and ask the user to enter a valid number when the user does input an invalid number of action | Tested the feature by entering an invalid number of action | The feature behaved as expected, and it did a display error | Test concluded and passed | ![screenshot](documentation/features/feature03_error.png) |
 | | Feature is expected to do display quiz questions and start quiz when the user does enter a valid number of action | Tested the feature by doing enter a valid number of action | The feature behaved as expected, and it did display quiz questions and start quiz | Test concluded and passed | ![screenshot](documentation/features/feature03.png) |
 | Quiz Questions | | | | | |
 | | Feature is expected to do display error and ask the user to enter valid option's letter when the user does input unvalid option's letter | Tested the feature by doing enter unvalid option's letter | The feature behaved as expected, and it did display error | Test concluded and passed |![screenshot](documentation/features/feature04-error.png) |
-| | Feature is expected to do display if the user guess the answer and go to the next question when the user does enter valid option's letter| Tested the feature by doing option's letter | The feature behaved as expected, and it did display the result if user guess or not and go to the next question | Test concluded and passed |![screenshot](documentation/features/feature05.png) |
+| The feature is expected to display if the user guesses the answer and go to the next question when the user does enter a valid option's letter. | Tested the feature by doing the option's letter | The feature behaved as expected, and it did display the result if the user guesses or not and go to the next question | Test concluded and passed |![screenshot](documentation/features/feature05.png) |
 | Add score to score worksheet | | | | | |
 | | Feature is expected to show whole score table when the user does input "y" | Tested the feature by doing input "y"" | The feature behaved as expected, and it did show the whole score table | Test concluded and passed |![screenshot](documentation/features/feature07.png) |
-| | Feature is expected to do show the message about program is closing when the user does enter "n"| Tested the feature by doing enter "n" | The feature behaved as expected, and it did display the mesagge that program is closing | Test concluded and passed |![screenshot](documentation/features/feature07.png) |
-| | Feature is expected to do display error and ask the user to enter "y" or "n" when the user does input unvalid letter of action | Tested the feature by doing enter unvalid letter of action | The feature behaved as expected, and it did display error | Test concluded and passed |![screenshot](documentation/features/feature07-error.png) |
+| The feature is expected to show the message that the program is closing when the user does enter "n"| Tested the feature by doing enter "n" | The feature behaved as expected, and it did display the message that the program is closing | Test concluded and passed |![screenshot](documentation/features/feature07.png) |
+| The feature is expected to do a display error and ask the user to enter "y" or "n" when the user does input an invalid letter of action | Tested the feature by entering an invalid letter of action | The feature behaved as expected, and it did a display error | Test concluded and passed |![screenshot](documentation/features/feature07-error.png) |
 | Show Score | | | | | |
-| | Feature is expected to back to menu when the user does input "y" | Tested the feature by doing input "y"" | The feature behaved as expected, and it did back to menu | Test concluded and passed |![screenshot](documentation/features/feature08.png) |
-| | Feature is expected to do show the message about program is closing when the user does enter "n"| Tested the feature by doing enter "n" | The feature behaved as expected, and it did display the mesagge that program is closing | Test concluded and passed |![screenshot](documentation/features/feature08.png) |
-| | Feature is expected to do display error and ask the user to enter "y" or "n" when the user does input unvalid letter of action | Tested the feature by doing enter unvalid letter of action | The feature behaved as expected, and it did display error | Test concluded and passed |![screenshot](documentation/features/feature08-error.png) |
+| | Feature is expected to go back to menu when the user does input "y" | Tested the feature by doing input "y"" | The feature behaved as expected, and it went back to menu | Test concluded and passed |![screenshot](documentation/features/feature08.png) |
+| The feature is expected to show the message that the program is closing when the user does enter "n | Tested the feature by doing enter "n" | The feature behaved as expected, and it did display the message that the program is closing | Test concluded and passed |![screenshot](documentation/features/feature08.png) |
+| The feature is expected to do a display error and ask the user to enter "y" or "n" when the user does input an invalid letter of action | Tested the feature by entering an invalid letter of action | The feature behaved as expected, and it did a display error | Test concluded and passed |![screenshot](documentation/features/feature08-error.png) |
 | Exit Program | | | | | |
-| | Feature is expected to do show a message and stop the program when the user chose the action "Exit" previously | Tested the feature by doing choose "Exit" action | The feature behaved as expected, and it did diaplay message and stop program | Test concluded and passed |![screenshot](documentation/features/feature09.png) |
+| The feature is expected to show a message and stop the program when the user chose the action "Exit" previously | Tested the feature by choosing the "Exit" action | The feature behaved as expected, and it did display a message and stop program | Test concluded and passed |![screenshot](documentation/features/feature09.png) |
 
-
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
-
-When in doubt, use the above method instead, and delete the table below.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-| Page | User Action | Expected Result | Pass/Fail | Comments |
-| --- | --- | --- | --- | --- |
-| Home | | | | |
-| | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x |
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ## Bugs
 
 
 - TypeError: `method` object is not subscriptable
 
-    ![screenshot](documentation/bugs/bug01.png)
+    ![screenshot](documentation/bugs/bug01.png)
 
-    - To fix this, I added to the line bracles () after `get_all_values`
-    `data = score_sheet.get_all_values`.
+    - To fix this, I added to the line brakets () after `get_all_values`
+    `data = score_sheet.get_all_values`.
 
 - AttributeError: `str` object has no attribute `uppercase`
 
-    ![screenshot](documentation/bugs/bug02.png)
+    ![screenshot](documentation/bugs/bug02.png)
 
-    - To fix this, I putted `upper()` instead of `uppercase()`.
+    - To fix this, I putted `upper()` instead of `uppercase()`.
 
-- Invalid data: B option doesn't exist, please emter a, b or c
+- Invalid data: B option doesn't exist, please enter a, b or c
 
-    ![screenshot](documentation/bugs/bug03.png)
+    ![screenshot](documentation/bugs/bug03.png)
 
-    - To fix this, I putted `lowercase()` instead of `uppercase()`
+    - To fix this, I putted `lowercase()` instead of `uppercase()`
 
 - `Endless loop` in show_score action()
 
-    ![screenshot](documentation/bugs/bug04.png)
+    ![screenshot](documentation/bugs/bug04.png)
 
-    - To fix this, I moved 
-    `back_to_menu = input("\n Would you like to return to the menu?(y/n): \n")`
-    to inside `while` loop instead.
+    - To fix this, I moved
+    `back_to_menu = input("\n Would you like to return to the menu?(y/n): \n")`
+    to inside `while` loop instead.
 
 - `E501 line too long` (81 > 79 characters)
 
-    ![screenshot](documentation/bugs/bug04.png)
+    ![screenshot](documentation/bugs/bug05.png)
 
-    - To fix this, I moved the text `"\n Would you like to return to the menu?(y/n): \n"` to next line and keep brackets - one on above line and another one on under line.
+    - To fix this, I moved the text `"\n Would you like to return to the menu?(y/n): \n"` to next line and keep brackets - one on the above line and another one on the under line.
 
 ## Unfixed Bugs
 
