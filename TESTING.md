@@ -1,6 +1,6 @@
 # Testing
 
-> [!NOTE]  
+> [!NOTE]  
 > Return back to the [README.md](README.md) file.
 
 
@@ -12,7 +12,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-|  | run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/dfedyachkina/language-quiz/main/run.py) | ![screenshot](documentation/validation/validation-python.png) | |
+|  | run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/dfedyachkina/language-quiz/main/run.py) | ![screenshot](documentation/validation/validation-python.png) | |
 
 ## Browser Compatibility
 
@@ -21,7 +21,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Browser | Terminal | Notes |
 | --- | --- | --- |
 | Chrome | ![screenshot](documentation/browsers/browser-chrome.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browsers/browser-firefox.png) | Works as expected |
+| Firefox | ![screenshot](documentation/browsers/browser-firefox.png) | Emojis in the Python terminal are cut-off for Firefox browsers |
 | Edge | ![screenshot](documentation/browsers/browser-edge.png) | Works as expected |
 
 
