@@ -217,7 +217,7 @@ def show_questions(language):
                 )
         else:
             print("The next question will be displayed in 3 seconds...")
-        time.sleep(2)
+        time.sleep(3)
         clear()
     end_quiz(user_score, number_correct_answers, language)
     score_data = [user_score, language]
@@ -282,8 +282,7 @@ def add_score_to_score_sheet(data):
         show_score()
     else:
         print("Returning to the menu... \n")
-        time(2)
-        clear()
+        time(3)
         main()
 
 
