@@ -277,7 +277,7 @@ def add_score_to_score_sheet(data):
 
         if validate_answer_yes_no(score_answer):
             break
-
+    clear()
     if score_answer == "y":
         show_score()
     else:
