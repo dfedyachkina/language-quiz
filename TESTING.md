@@ -114,6 +114,8 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## Unfixed Bugs
 
+- The terminal can clean only 24 lines maximum
 
-> [!NOTE]  
-> There are no remaining bugs that I am aware of.
+    ![screenshot](documentation/bugs/bug06.png)
+
+    - Attempted fix: the Python terminal only clears 24 lines because it's tied to the terminal's internal configuration, which is beyond the scope of the Python environment itself. The terminal's default behavior for clearing lines is a predefined setting, likely related to the terminal's buffer or display configuration.
