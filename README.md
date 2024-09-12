@@ -98,6 +98,35 @@ Below is the flowchart of the main process of this Python program. It shows the 
 
 ![screenshot](documentation/flowchart.png)
 
+```mermaid
+graph TD
+    A[Start] --> B[Welcome to the Language Quiz!]
+    B --> C[Enter username]
+    C --> D{Is username 4 or more letters?}
+    D --> |Yes| E[Show menu: Start Quiz, Show Score, Exit]
+    D --> |No| F[Ask user to enter another username] --> C
+
+    E --> G[User inputs a number for their action]
+    G --> H{Is input validated?}
+    H --> |No| I[Show error message] --> G
+    H --> |Yes| J{Did user choose start quiz?}
+    J --> |Yes| K[Start Quiz] --> L[Choose language]
+    J --> |No| M{Did user choose show score?}
+    M --> |Yes| N[Show score]
+    N --> O{Show entire score?}
+    O --> |Yes| N
+    O --> |No| P{Back to menu?}
+    P --> |Yes| E
+    P --> |No| Q[End]
+    M --> |No| Q
+
+    E --> R{Did user choose exit?}
+    R --> |Yes| Q
+    R --> |No| E
+```
+
+Source: [Mermaid](https://mermaid.live/edit#pako:eNplU9tymzAQ_ZWtnrGHW7DNQzvxpU7SxInjdjot-EEFxWYMkiuJNgn2v1cXu4EJT7C7Z885u0uDMpYTFKMNx_stfJ2mFNRzmawk5nINvd5HGCffSZmxioBkILcEbjHd1HhDYFkXrx_WFjI2tZNkRiXhUAvCKa7IKTkxyWlzLf5nIATGoWKcQEmkwohPR1s8NcWHH0QcYJastuwvVITWMRhNhtQBE15lCu7A7LmQ6w52wQ7wObkUO0OndRMjC1OmDLTkWdEpteiZ-Zwn3zSooPtaCsBA6-qX-n5SchW4UF0yWTB6YpwbzJW2ZhDwB5dFjiXJz36u3jRdWzuEc-2dCKGmaDXMO7XG-00zLXJrINsyJggIM4DfagDn3jet-i_J24Bs09tkYoHlaWPrDkoruntPohUKPdkzyV2LZGEdmPyp28Kk7xtrjcpCrbSDv2_jOyGt4KEZ42ynd6S3fMY8tI-gE9KYpTqzfN1RZ8LdRT6-80bUpZwZHlsMy05It1KcyEEV4RUucvV_NLoiReoAKpKiWL3mmO9SlNKjqsO1ZKsXmqFY8po4qN7rC5gWWP1WFYqfcClUdI8pihv0jOKeF1303TAcDge-5_leFPgOetHxQeD2IzdwLzx_ELkj3z866JUx1SToe8Ew9EfeKHDdMAjCyHT8aZKWlrN6sz3RHf8BOj8vxQ)
+
 ### Classes & Functions
 
 
