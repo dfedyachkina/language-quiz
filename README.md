@@ -21,25 +21,23 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://language-quiz-8
 
 - **Start the program**
 
-    - Greet a user and ask to enter username
+    - Greet a user and ask to enter username
 
 ![screenshot](documentation/features/feature01.png)
 
 - **Menu**
-
-    - Display a menu and ask the user to enter the number of actions he wants to proceed with
+   - Display a menu and ask the user to enter the number of actions he wants to proceed with
 
 ![screenshot](documentation/features/feature02.png)
 
 - **Start Quiz - Choose language**
-
-    - Display the language's options and ask the user to enter the number of languages he wants to proceed with
+    - Display the language's options and ask the user to enter the number of languages he wants to proceed with
 
 ![screenshot](documentation/features/feature03.png)
 
 - **Quiz Questions**
 
-- Display the question of the chosen language's quiz and get an answer from the user. After getting the user's inputs - the feature displays the result if the answer was correct or not.
+    - Display the question of the chosen language's quiz and get an answer from the user. After getting the user's inputs - the feature displays the result if the answer was correct or not.
 
 ![screenshot](documentation/features/feature04.png)
 ![screenshot](documentation/features/feature05.png)
@@ -47,19 +45,18 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://language-quiz-8
 
 - **Add score to score worksheet**
 
-    - Display a user's score and ask him if he would like to see the whole score.
+  - Display a user's score and ask him if he would like to see the whole score.
 
 ![screenshot](documentation/features/feature07.png)
 
 - **Show score table**
 
-    - Display the whole score table and ask the user if he would like to come back to the menu.
+    - Display the whole score table and ask the user if he would like to come back to the menu.
 
 ![screenshot](documentation/features/feature08.png)
 
 - **Exit program**
-
-    - Display a message to the user and stop the code.
+   - Display a message to the user and stop the code.
 
 ![screenshot](documentation/features/feature09.png)
 
@@ -133,35 +130,35 @@ Source: [Mermaid](https://mermaid.live/edit#pako:eNplU9tymzAQ_ZWtnrGHW7DNQzvxpU7
 The primary functions used on this application are:
 
 - `clear()`
-    - Clear the terminal.
+    - Clear the terminal.
 - `get_username()`
-    - Get a username from the user.
+    - Get a username from the user.
 - `validate_username()`
-    - Validate if the user created the username that meets requirements.
+    - Validate if the user created the username that meets requirements.
 - `user_action()`
-    - Show options of actions to the user and get a number of actions from the user.
+    - Show options of actions to the user and get a number of actions from the user.
 - `validate_user_action()`
-    - Validate the input for action from the user.
+    - Validate the input for action from the user.
 - `start_quiz()`
-    - Show options of languages.
+    - Show options of languages.
 - `validate_lan_answer()`
-    -  Validate the user's input for the choose language question.
+    - Validate the user's input for the choose language question.
 - `show_questions()`
-    - Show the questions of the chosen language's quiz, get the username's answers, and calculate the score.
+    - Show the questions of the chosen language's quiz, get the username's answers, and calculate the score.
 - `validate_answer()`
-    -  Validate the user's inputs for quiz answers.
+    - Validate the user's inputs for quiz answers.
 - `end_quiz()`
-    -  Displays the result of the quiz.
+    - Displays the result of the quiz.
 - `add_score_to_score_sheet()`
-    - Add the user's score to the score worksheet and ask a user if he would like to see the whole score table.
+    - Add the user's score to the score worksheet and ask a user if he would like to see the whole score table.
 - `validate_answer_yes_no()`
-     - Validate the user's input for the question where is answer yes or no
+    - Validate the user's input for the question where is answer yes or no
 - `show_score()`
-    -  Shows the whole score table.
+    - Shows the whole score table.
 - `exit_program()`
-    -  Display bye message and stops the program.
+    - Display bye message and stops the program.
 - `main()`
-    - Run all program functions.
+    - Run all program functions.
 
 ### Imports
 
