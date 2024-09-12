@@ -11,9 +11,9 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://language-quiz-8
 
 ## UX
 
- - `RED` - error text or incorrect answer
- - `GREEN` - correct answer
- - `BLUE`- score color
+ - `RED` - error text or incorrect answer
+ - `GREEN` - correct answer
+ - `BLUE`- score color
 
 ## Features
 
@@ -21,25 +21,25 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://language-quiz-8
 
 - **Start the program**
 
-    - Greet a user and ask to enter username
+    - Greet a user and ask to enter username
 
 ![screenshot](documentation/features/feature01.png)
 
 - **Menu**
 
-    - Display a menu and ask user to enter the number of action he wants to proceed with
+    - Display a menu and ask the user to enter the number of actions he wants to proceed with
 
 ![screenshot](documentation/features/feature02.png)
 
 - **Start Quiz - Choose language**
 
-    - Display the language's options and ask user to enter the number of language he wants to proceed with
+    - Display the language's options and ask the user to enter the number of languages he wants to proceed with
 
 ![screenshot](documentation/features/feature03.png)
 
 - **Quiz Questions**
 
-    - Display question of chosen language's quiz and get an answer from the user. After get user's inputs - the feature display the result if the answer was correct or not.
+- Display the question of the chosen language's quiz and get an answer from the user. After getting the user's inputs - the feature displays the result if the answer was correct or not.
 
 ![screenshot](documentation/features/feature04.png)
 ![screenshot](documentation/features/feature05.png)
@@ -47,31 +47,31 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://language-quiz-8
 
 - **Add score to score worksheet**
 
-    - Display a user's score and ask him if he would like to see the whole score.
+    - Display a user's score and ask him if he would like to see the whole score.
 
 ![screenshot](documentation/features/feature07.png)
 
 - **Show score table**
 
-    - Display the whole score table and ask user if he would like to come back to menu.
+    - Display the whole score table and ask the user if he would like to come back to the menu.
 
 ![screenshot](documentation/features/feature08.png)
 
 - **Exit program**
 
-    - Display a message to the user and stop the code.
+    - Display a message to the user and stop the code.
 
 ![screenshot](documentation/features/feature09.png)
 
 
 ### Future Features
 
-- Level Language Quiz 
-    - Add options to choose the hardness of quiz: Easy, Medium, Hard.
+- Level Language Quiz
+    - Add options to choose the hardness of the quiz: Easy, Medium, Hard.
 - More languages
-    - Add more languages such as: Portuguese, Ukranian, Polish, Irish, Turkish.
+    - Add more languages, such as: Portuguese, Ukrainian, Polish, Irish, and Turkish.
 - Sort score by languages
-    - Show score by chosen language
+    - Show score by chosen language
 
 ## Tools & Technologies Used
 
@@ -133,35 +133,35 @@ Source: [Mermaid](https://mermaid.live/edit#pako:eNplU9tymzAQ_ZWtnrGHW7DNQzvxpU7
 The primary functions used on this application are:
 
 - `clear()`
-    - Clear the terminal.
+    - Clear the terminal.
 - `get_username()`
-    - Get a username from user.
+    - Get a username from the user.
 - `validate_username()`
-    - Validate if the user created the username which meets requirements.
+    - Validate if the user created the username that meets requirements.
 - `user_action()`
-    - Show options of actionns to the user and get a number of actiopn from user.
+    - Show options of actions to the user and get a number of actions from the user.
 - `validate_user_action()`
-    - Validate the input for action from user.
+    - Validate the input for action from the user.
 - `start_quiz()`
-    - Show options of languages.
+    - Show options of languages.
 - `validate_lan_answer()`
-    -  Validate the user's input for choose language question.
+    -  Validate the user's input for the choose language question.
 - `show_questions()`
-    - Show the questions of the chosen language's quiz, gets the username's answers and calculate the score.
+    - Show the questions of the chosen language's quiz, get the username's answers, and calculate the score.
 - `validate_answer()`
-    -  Validate the user's inputs for quiz answers.
+    -  Validate the user's inputs for quiz answers.
 - `end_quiz()`
-    -  Didplays the result of quiz.
+    -  Displays the result of the quiz.
 - `add_score_to_score_sheet()`
-    -  Add user's score to the score worksheet and ask a user if he would like to see the whole score table.
+    - Add the user's score to the score worksheet and ask a user if he would like to see the whole score table.
 - `validate_answer_yes_no()`
-    -  Validate user's input for the question where is answer yes or no
+     - Validate the user's input for the question where is answer yes or no
 - `show_score()`
-    -  Shows the whole score table.
+    -  Shows the whole score table.
 - `exit_program()`
-    -  Display bye message and and the program.
+    -  Display bye message and stops the program.
 - `main()`
-    - Run all program functions.
+    - Run all program functions.
 
 ### Imports
 
@@ -169,14 +169,14 @@ I've used the following Python packages and/or external imported packages.
 
 - `gspread`: used with the Google Sheets API
 - `google.oauth2.service_account`: used for the Google Sheets API credentials
-- `random`: used for shuffle the options of answers
+- `random`: used to shuffle the options of answers
 - `time`: used for the pause code for some time
-- `os`: used for the having access to cls command
+- `os`: used for having access to the CLS command
 - `colorama`: used for the coloring text
 
 ## Testing
 
-> [!NOTE]  
+> [!NOTE]  
 > For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
@@ -220,7 +220,7 @@ The **Procfile** can be created with the following command:
 The **runtime.txt** file needs to know which Python version you're using:
 1. type: `python3 --version` in the terminal.
 2. in the **runtime.txt** file, add your Python version:
-	- `python-3.9.19`
+    - `python-3.9.19`
 
 For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
 
@@ -233,7 +233,7 @@ Or:
 - In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
 - Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
-	- `git push heroku main`
+    - `git push heroku main`
 
 The frontend terminal should now be connected and deployed to Heroku!
 
@@ -251,13 +251,13 @@ If using any confidential credentials, such as `CREDS.json` or `env.py` data, th
 
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/dfedyachkina/language-quiz) 
-2. Locate the Code button above the list of files and click it 
+1. Go to the [GitHub repository](https://github.com/dfedyachkina/language-quiz)
+2. Locate the Code button above the list of files and click it
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/dfedyachkina/language-quiz.git`
+    - `git clone https://github.com/dfedyachkina/language-quiz.git`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
@@ -331,7 +331,7 @@ A credentials file in JSON format from the Google Cloud Platform is also needed:
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Google Translate](https://translate.google.com/) | Quiz section | text | Finsd the translation of words |
+| [Google Translate](https://translate.google.com/) | Quiz section | text | Find the translation of words |
 
 
 ### Acknowledgements
@@ -340,5 +340,3 @@ A credentials file in JSON format from the Google Cloud Platform is also needed:
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
