@@ -1,8 +1,8 @@
 # Testing
 
-> [!NOTE]  
-> Return back to the [README.md](README.md) file.
 
+> [!NOTE]  
+> Return back to the [README.md](README.md) file.
 
 ## Code Validation
 
@@ -116,3 +116,6 @@ Defensive programming was manually tested with the below user acceptance testing
     ![screenshot](documentation/bugs/bug06.png)
 
     - Attempted fix: the Python terminal only clears 24 lines because it's tied to the terminal's internal configuration, which is beyond the scope of the Python environment itself. The terminal's default behavior for clearing lines is a predefined setting, likely related to the terminal's buffer or display configuration.
+
+> [!NOTE]  
+> There are no remaining bugs that I am aware of.
