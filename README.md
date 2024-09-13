@@ -173,7 +173,7 @@ I've used the following Python packages and/or external imported packages.
 
 ## Testing
 
-> [!NOTE]  
+> [!NOTE]
 > For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
